@@ -1,7 +1,7 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -10,146 +10,73 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Start content at the top */
-    overflow-x: hidden; /* Prevent horizontal overflow */
-    overflow-y: auto; /* Allow vertical scrolling */
-}
-
-.container {
+    justify-content: center;
+    overflow: hidden;
+}.container {
     position: relative;
-    width: 100%; /* Responsive width */
-    max-width: 500px; /* Limit max width */
+    width: 500px;
     height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
-    flex: 1 0 auto; /* Takes up available space */
-}
-
-/* Static image for the DN + Circle */
+}/* Static image for the DN + Circle */
 .main-image {
     width: 100%;
     height: 100%;
     position: absolute;
-}
-
-.main-image img {
+}.main-image img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-}
-
-/* Logo container for positioning logos at roots of unity */
+}/* Logo container for positioning logos at roots of unity */
 .logo-container {
     position: absolute;
     width: 100%;
     height: 100%;
-}
-
-/* General logo styles */
+}/* General logo styles */
 .logo {
     position: absolute;
     width: 60px;
     height: 60px;
     transition: all 0.3s ease;
-}
-
-.logo img {
+}.logo img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-}
-
-/* Hover effect: yellow background shadow */
+}/* Hover effect: yellow background shadow */
 .logo:hover {
     background-color: rgba(255, 255, 0, 0.3);
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(255, 255, 0, 0.5);
-}
-
-/* Positioning the logos at the 7 roots of unity (adjust for responsiveness) */
-.logo-1 { /* Approx 0 degrees (top) */
+}/* Positioning the logos at the 7 roots of unity (based on the image circle radius) /
+.logo-1 { / Approx 0 degrees (top) */
     top: calc(50% - 200px - 30px);
     left: calc(50% - 30px);
-}
-
-.logo-2 { /* Approx 51.43 degrees */
-    top: calc(50% - 200px * 0.623 - 30px);
-    left: calc(50% + 200px * 0.782 - 30px);
-}
-
-.logo-3 { /* Approx 102.86 degrees */
-    top: calc(50% - 200px * -0.222 - 30px - 40px);
-    left: calc(50% + 200px * 0.975 - 30px + 30px);
-}
-
-.logo-4 { /* Approx 154.29 degrees */
-    top: calc(50% - 200px * -0.901 - 30px - 60px);
-    left: calc(50% + 200px * 0.434 - 30px);
-}
-
-.logo-5 { /* Approx 205.72 degrees */
-    top: calc(50% - 200px * -0.901 - 30px);
-    left: calc(50% + 200px * -0.434 - 30px);
-}
-
-.logo-6 { /* Approx 257.15 degrees */
-    top: calc(50% - 200px * -0.222 - 30px);
-    left: calc(50% + 200px * -0.975 - 30px + 30px);
-}
-
-.logo-7 { /* Approx 308.58 degrees */
-    top: calc(50% - 200px * 0.623 - 30px);
-    left: calc(50% + 200px * -0.782 - 30px);
-}
-
-/* Footer styling */
+}.logo-2 { /* Approx 51.43 degrees */
+    top: calc(50% - 200px * 0.623 - 30px); / cos(51.43°) ≈ 0.623 /
+    left: calc(50% + 200px * 0.782 - 30px); / sin(51.43°) ≈ 0.782 /
+}.logo-3 { /* Approx 102.86 degrees */
+    top: calc(50% - 200px * -0.222 - 30px - 40px); / cos(102.86°) ≈ -0.222 /
+    left: calc(50% + 200px * 0.975 - 30px); / sin(102.86°) ≈ 0.975 /
+}.logo-4 { /* Approx 154.29 degrees */
+    top: calc(50% - 200px * -0.901 - 30px - 40px); / cos(154.29°) ≈ -0.901 /
+    left: calc(50% + 200px * 0.434 - 30px); / sin(154.29°) ≈ 0.434 /
+}.logo-5 { /* Approx 205.72 degrees */
+    top: calc(50% - 200px * -0.901 - 30px); / cos(205.72°) ≈ -0.901 /
+    left: calc(50% + 200px * -0.434 - 30px); / sin(205.72°) ≈ -0.434 /
+}.logo-6 { /* Approx 257.15 degrees */
+    top: calc(50% - 200px * -0.222 - 30px); / cos(257.15°) ≈ -0.222 /
+    left: calc(50% + 200px * -0.975 - 30px); / sin(257.15°) ≈ -0.975 /
+}.logo-7 { /* Approx 308.58 degrees */
+    top: calc(50% - 200px * 0.623 - 30px); / cos(308.58°) ≈ 0.623 /
+    left: calc(50% + 200px * -0.782 - 30px); / sin(308.58°) ≈ -0.782 /
+}/* Placeholder for the text animation at the bottom */
 .text-animation {
     margin-top: 20px;
     width: 300px;
     height: 50px;
-    text-align: center;
-    flex-shrink: 0; /* Prevents shrinking */
-    margin-bottom: 20px; /* Space from bottom */
-}
-
-.text-animation img {
+}.text-animation img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-}
-
-/* Responsive adjustments */
-@media (max-width: 500px) {
-    .container {
-        width: 100%; /* Full width on small screens */
-        height: auto; /* Adjust height based on content */
-    }
-    .main-image img {
-        object-fit: cover; /* Ensure image fits on small screens */
-    }
-    .logo {
-        width: 40px; /* Smaller logos on phone */
-        height: 40px;
-    }
-    .text-animation {
-        width: 200px; /* Smaller footer on phone */
-        height: 40px;
-    }
-}
-
-@media (min-width: 768px) {
-    body {
-        justify-content: space-between; /* Push footer to bottom on desktop */
-    }
-    .container {
-        margin-top: 0; /* Reset top margin */
-    }
-    .text-animation {
-        position: relative;
-        bottom: 0;
-        width: 200px; /* Adjust size for desktop */
-        height: 40px;
-    }
 }
