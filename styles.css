@@ -96,7 +96,7 @@ body {
 
 .logo-6 { /* Approx 257.15 degrees */
     top: calc(50% - 200px * -0.222 - 30px);
-    left: calc(50% + 200px * -0.975 - 30px);
+    left: calc(50% + 200px * -0.975 - 30px - 50px);
 }
 
 .logo-7 { /* Approx 308.58 degrees */
