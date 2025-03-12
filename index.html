@@ -1,9 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated DN Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .center-animation {
+            position: relative;
+            width: 400px;
+            height: 400px;
+        }
+        .dn-animation {
+            width: 100%;
+            animation: spin 10s linear infinite;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .logos {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .logo {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+        .logo:hover {
+            box-shadow: 0 0 15px yellow;
+        }
+        #logo1 { top: 0%; left: 50%; transform: translate(-50%, -50%); }
+        #logo2 { top: 25%; left: 85%; transform: translate(-50%, -50%); }
+        #logo3 { top: 75%; left: 85%; transform: translate(-50%, -50%); }
+        #logo4 { top: 100%; left: 50%; transform: translate(-50%, -50%); }
+        #logo5 { top: 75%; left: 15%; transform: translate(-50%, -50%); }
+        #logo6 { top: 25%; left: 15%; transform: translate(-50%, -50%); }
+        #logo7 { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+        .bottom-text {
+            position: absolute;
+            bottom: 20px;
+            animation: fade-in-out 5s infinite;
+        }
+        @keyframes fade-in-out {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+        .text-animation {
+            width: 300px;
+        }
+    </style>
 </head>
 <body>
-    <a href="library.html" style="white-space: nowrap;">library</a>
+    <div class="container">
+        <div class="center-animation">
+            <img src="/mnt/data/{CD5C3D08-2939-4182-A170-D5191B9D5C77}.png" class="dn-animation" alt="DN Animation">
+            <div class="logos">
+                <a href="#" class="logo" id="logo1"></a>
+                <a href="#" class="logo" id="logo2"></a>
+                <a href="#" class="logo" id="logo3"></a>
+                <a href="#" class="logo" id="logo4"></a>
+                <a href="#" class="logo" id="logo5"></a>
+                <a href="#" class="logo" id="logo6"></a>
+                <a href="#" class="logo" id="logo7"></a>
+            </div>
+        </div>
+        <div class="bottom-text">
+            <img src="/mnt/data/{146A3B69-A19A-453F-84AC-31542BB470B0}.png" class="text-animation" alt="Seek, for you will find light.">
+        </div>
+    </div>
 </body>
 </html>
