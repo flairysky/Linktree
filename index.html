@@ -35,8 +35,11 @@
             height: auto;
         }
         .dn-image {
-    width: 240px;
-    height: auto; /* or height: 250px; to force square */
+    width: 100%;
+    max-width: 350px;          /* limits how big it gets */
+    height: auto;
+    transform: scale(0.75);    /* visually shrinks the video a bit */
+
         }
         .logos {
             position: absolute;
@@ -55,7 +58,7 @@
             box-shadow: 0 0 15px yellow;
         }
         /* Positioning the logos around the 7th roots of unity */
-        #logo1 { position: absolute; top: 5%; left: 45%; transform: translate(-50%, -50%); }
+        #logo1 { position: absolute; top: 10%; left: 45%; transform: translate(-50%, -50%); }
         #logo2 { position: absolute; top: 18%; left: 80%; transform: translate(-50%, -50%); }
         #logo3 { position: absolute; top: 78%; left: 68%; transform: translate(-50%, -50%); }
         #logo4 { position: absolute; top: 95%; left: 50%; transform: translate(-50%, -50%); }
