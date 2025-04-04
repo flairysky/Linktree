@@ -33,7 +33,7 @@
       position: relative;
       width: 100%;
       max-width: 350px;
-      transform: scale(0.7); /* <- back as you requested */
+      transform: scale(0.7);
       transform-origin: center;
     }
 
@@ -60,7 +60,7 @@
       width: 100%;
       height: 100%;
       z-index: 4;
-      pointer-events: none; /* allow video clicks */
+      pointer-events: none;
     }
 
     .logo img {
@@ -68,7 +68,7 @@
       height: 50px;
       border-radius: 50%;
       transition: 0.3s;
-      pointer-events: auto; /* allow logo clicks */
+      pointer-events: auto;
     }
 
     .logo img:hover {
@@ -83,15 +83,16 @@
     #logo6 { position: absolute; top: 27%; left: 15%; transform: translate(-50%, -50%); }
     #logo7 { position: absolute; top: 42%; left: 88%; transform: translate(-50%, -50%); }
 
-    .bottom-text {
+    .bottom-video {
       margin-top: 20px;
       width: 80%;
       max-width: 300px;
     }
 
-    .text-image {
+    .bottom-video video {
       width: 100%;
       height: auto;
+      display: block;
     }
 
     @media (max-width: 600px) {
@@ -100,7 +101,7 @@
         height: 14vw;
       }
 
-      .bottom-text {
+      .bottom-video {
         margin-top: 10px;
       }
     }
@@ -134,9 +135,17 @@
       <a href="https://librarydn.notion.site/Library-1c7a6422f32a80859ea6eef604bc92a9" class="logo" id="logo7"><img src="readingnotes.jpg" alt="Logo 2" /></a>
     </div>
 
-    <!-- Bottom text -->
-    <div class="bottom-text">
-      <img src="text.jpg" class="text-image" alt="Seek, for you will find light." />
+    <!-- Bottom autoplay video (replaces image) -->
+    <div class="bottom-video">
+      <video
+        autoplay
+        muted
+        playsinline
+        onended="this.pause();"
+      >
+        <source src="seekvideo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
   </div>
 </body>
