@@ -64,12 +64,15 @@
     }
 
     .logo img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      transition: 0.3s;
-      pointer-events: auto;
-    }
+  width: 50px;
+  height: 50px;
+  background-color: transparent; /* important: no opaque fill */
+  border-radius: 50%;            /* optional: keep only if you want circles */
+  transition: 0.3s;
+  pointer-events: auto;
+  mix-blend-mode: screen;        /* helps blend with light/glow effects */
+}
+
 
     .logo img:hover {
       box-shadow: 0 0 15px yellow;
@@ -126,8 +129,8 @@
 
     <!-- Logos -->
     <div class="logos">
-      <a href="https://www.instagram.com/academiaclandestina/?igsh=dWtxa21nd3hxbXA%3D#" class="logo" id="logo1"><img src="assets/AC.jpg" alt="Logo 1" /></a>
-      <a href="#" class="logo" id="logo2"></a>
+      <a href="https://academiaclandestina.com" class="logo" id="logo1"><img src="assets/actransparent.png" alt="Logo 1" /></a>
+      <a href="https://secretsobservatorz.com" class="logo" id="logo2"><img src="assets/SO.image.png" alt="Logo 2" /></a>
       <a href="https://flairysky.github.io/startup-blender/" class="logo" id="logo3"><img src="assets/startupblender.png" alt="Logo 3" /></a>
       <a href="https://zuccmap.ethz.ch/" class="logo" id="logo5"><img src="assets/Zuccmap.png" alt="Logo 4" /></a>
       <a href="#" class="logo" id="logo4"></a>
