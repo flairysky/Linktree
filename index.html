@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>encrypted in my DNA</title>
-  <link rel="icon" type="image/jpg" href="AC.jpg" />
+  <link rel="icon" type="image/jpg" href="assets/dnICON.svg" />
   <script defer src="https://cloud.umami.is/script.js" data-website-id="6aba8647-b78f-4441-bf86-49047d7bf4a3"></script>
   <style>
     body {
@@ -42,6 +42,12 @@
       width: 100%;
       height: auto;
       display: block;
+      transition: 0.3s; /* Smooth transition for glow */
+    }
+
+    .video-wrapper:hover .dn-image {
+      box-shadow: 0 0 30px yellow; /* Glow effect on hover */
+      filter: brightness(1.2); /* Slight brightness increase */
     }
 
     .click-area {
@@ -65,15 +71,14 @@
     }
 
     .logo img {
-  width: 50px;
-  height: 50px;
-  background-color: transparent; /* important: no opaque fill */
-  border-radius: 50%;            /* optional: keep only if you want circles */
-  transition: 0.3s;
-  pointer-events: auto;
-  mix-blend-mode: screen;        /* helps blend with light/glow effects */
-}
-
+      width: 50px;
+      height: 50px;
+      background-color: transparent;
+      border-radius: 50%;
+      transition: 0.3s;
+      pointer-events: auto;
+      mix-blend-mode: screen;
+    }
 
     .logo img:hover {
       box-shadow: 0 0 15px yellow;
@@ -136,7 +141,7 @@
       <a href="https://zuccmap.ethz.ch/" class="logo" id="logo5"><img src="assets/Zuccmap.png" alt="Logo 4" /></a>
       <a href="#" class="logo" id="logo4"></a>
       <a href="https://open.spotify.com/user/31vf47ewyswfmxqzoimohm2wolla?si=PDM4QIVFSn--AdJUGZXj7Q" class="logo" id="logo6"><img src="assets/musicnew.png" alt="Logo 6" /></a>
-      <a href="https://librarydn.notion.site/Library-1c7a6422f32a80859ea6eef604bc92a9" class="logo" id="logo7"><img src="assets/readingnotes.jpg" alt="Logo 2" /></a>
+      <a href="https://librarydn.notion.site/Library-1c7a6422f32a80859ea6eef604bc92a9" class="logo" id="logo7"><img src="assets/readingnotes.jpg" alt="Logo 7" /></a>
     </div>
 
     <!-- Bottom autoplay video (replaces image) -->
